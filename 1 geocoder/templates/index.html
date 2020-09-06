@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>Geocoder 9000</title>
+    <link rel="stylesheet" href='{{url_for('static', filename='css/main.css')}}'
+</head>
+<html>
+<body>
+  <header>
+    <div class="container">
+
+      <h1>GEOCODER 9000</h1>
+    </div>
+  </header>
+  <div class='home'>
+      <p>Upload CSV file.</p>
+      <form action="{{url_for('success')}}" method='POST' enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Submit</button>
+        <p>lon: {{lat | safe}}</p>
+        <p>lat: {{lon | safe}}</p>
+        <p>lon: {{df | safe}}</p>
+  </div></body>
+
+</html>
